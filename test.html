@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           
+        }
+
+        header {
+        
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 10px;
+            width: 250px;
+            padding: 15px;
+        }
+
+        .project-card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Pavithra</h1>
+    <img src="data:image/jpeg;base64,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">
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello, I am Pavithra, i'm currently pursuing B.E cse in PMC TECH Hosur,im strong at problem solving.</p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Node.js</li>
+        
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>credit card fraud detection</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>netflix in data analyst</p>
+        </div>
+        
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+    <input type="text" name="name" placeholder="Pavithra " required>
+        <input type="email" name="email" placeholder="pavithragowda468@gmail.com" required>
+        <textarea name="message" placeholder="Hanumanthapuram village 2nd sipcot kumedhepalli post Hosur" required></textarea>
+        <button type="submit">Sen
